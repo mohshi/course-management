@@ -35,6 +35,8 @@ public class CoursesController(CourseDbContext dbContext) : ControllerBase
         dbContext.Courses.Add(course);
         await dbContext.SaveChangesAsync(cancellationToken);
 
+
+        //Test comment to check GitHub process
         return CreatedAtAction(nameof(GetCourse), new { id = course.Id }, course);
     }
 
